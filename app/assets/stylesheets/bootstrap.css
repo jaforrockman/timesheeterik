@@ -3063,6 +3063,17 @@ fieldset[disabled] .btn-default.active {
   color: #fff;
   background-color: #333;
 }
+
+.btn-erik,
+.btn-erik:hover
+ {
+  color:#ff9900;
+  background-color: #ff9900;
+  
+  
+}
+
+
 .btn-primary {
   color: #fff;
   background-color: #337ab7;

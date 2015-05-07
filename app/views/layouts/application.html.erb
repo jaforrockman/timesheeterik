@@ -6,7 +6,21 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="container">
+
+	<div>
+					
+			<div class="pull-right">
+				
+				<font color= #005478><%=link_to "Home", "/" , class: "btn btn-erik" %>
+					
+				<font color= #005478> <%=link_to "About", "/about" , class: "btn btn-erik"%> </font>
+				<font color= #005478> <%=link_to "Clients controller", "/clients" , class: "btn btn-erik"%> </font>
+				
+			</div>
+
+				
+	</div>
 
 <%= yield %>
 
