@@ -1,0 +1,49 @@
+<%= form_for(@sheet) do |f| %>
+  <% if @sheet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sheet.errors.count, "error") %> prohibited this sheet from being saved:</h2>
+
+      <ul>
+      <% @sheet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :client_name %><br>
+    <%= f.text_field :client_name, data: {autocomplete_source: Client.order(:name).map(&:name)} %>
+  </div>
+  <div class="field">
+    <%= f.label :activity_id %><br>
+    <%= f.text_field :activity_id %>
+  </div>
+  <div class="field">
+    <%= f.label :omschrijving %><br>
+    <%= f.text_area :omschrijving %>
+  </div>
+  <div class="field">
+    <%= f.label :uur %><br>
+    <%= f.text_field :uur %>
+  </div>
+  <div class="field">
+    <%= f.label :minuten %><br>
+    <%= f.text_field :minuten %>
+  </div>
+  <div class="field">
+    <%= f.label :antal %><br>
+    <%= f.text_field :antal %>
+  </div>
+  <div class="field">
+    <%= f.label :opmerking_intern %><br>
+    <%= f.text_area :opmerking_intern %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

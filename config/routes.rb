@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
  
+  resources :sheets
+  resources :activities
   resources :clients
   resources :clients
   root to: 'pages#home'

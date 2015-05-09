@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @sheet.date %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @sheet.client_id %>
+</p>
+<p>
+  <strong>Client code:</strong>
+  <%= @sheet.client.code %> &nbsp
+
+  <strong>Client name:</strong>
+  <%= @sheet.client.name %>
+</p>
+
+<p>
+  <strong>Activity:</strong>
+  <%= @sheet.activity_id %>
+
+  &nbsp
+  <%= @sheet.activity.name %>
+
+</p>
+
+<p>
+  <strong>Omschrijving:</strong>
+  <%= @sheet.omschrijving %>
+</p>
+
+<p>
+  <strong>Uur:</strong>
+  <%= @sheet.uur %>
+</p>
+
+<p>
+  <strong>Minuten:</strong>
+  <%= @sheet.minuten %>
+</p>
+
+<p>
+  <strong>Antal:</strong>
+  <%= @sheet.antal %>
+</p>
+
+<p>
+  <strong>Opmerking intern:</strong>
+  <%= @sheet.opmerking_intern %>
+</p>
+
+<%= link_to 'Edit', edit_sheet_path(@sheet) %> |
+<%= link_to 'Back', sheets_path %>
