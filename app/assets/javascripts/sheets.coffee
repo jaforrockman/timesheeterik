@@ -4,5 +4,5 @@
 
 jQuery ->
 	$('#sheet_client_name').autocomplete
-		source: $('#sheet_client_name').data('autocomplete-source')
-
+	  source: $('#sheet_client_name').data('autocomplete-source')
+          

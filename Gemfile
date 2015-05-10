@@ -16,7 +16,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'rails4-autocomplete'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-
+gem 'jquery-turbolinks'
 gem 'jquery-ui-rails', '~> 5.0.3'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -33,10 +33,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
-end
 
 group :development, :test do
  gem 'sqlite3'
