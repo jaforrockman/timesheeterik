@@ -5,4 +5,11 @@
 jQuery ->
 	$('#sheet_client_name').autocomplete
 	  source: $('#sheet_client_name').data('autocomplete-source')
-          
+
+	  $('#sheet_activity_name').autocomplete
+	  source: $('#sheet_activity_name').data('autocomplete-source')
+
+	  $('#sheet_date').datepicker (dateFormat: 'dd/mm/yy')
+
+   
+   
