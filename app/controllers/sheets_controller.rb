@@ -69,6 +69,6 @@ class SheetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sheet_params
-      params.require(:sheet).permit(:date, :client_id, :activity_id, :omschrijving, :uur, :minuten, :antal, :opmerking_intern, :client_name)
+      params.require(:sheet).permit(:date, :client_id, :activity_id, :omschrijving, :uur, :minuten, :antal, :opmerking_intern, :client_name, :activity_name)
     end
 end

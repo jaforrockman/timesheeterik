@@ -5,14 +5,22 @@ class Sheet < ActiveRecord::Base
 	validates :client_id, presence: true
 	validates :activity_id, presence: true
 
-def client_name
-	client.try(:name)
-end
+	def client_name
+		client.try(:name)
+	end
 
-def client_name=(name)
-	self.client = Client.find_by_name(name) if name.present?
-	
-end
+	def client_name=(name)
+		self.client = Client.find_by_name(name) if name.present?
+		
+	end
 
+	def activity_name
+		activity.try(:name)
+	end
+
+	def activity_name=(name)
+		self.activity = Activity.find_by_name(name) if name.present?
+		
+	end
 
 end
