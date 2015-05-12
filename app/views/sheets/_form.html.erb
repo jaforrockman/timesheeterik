@@ -11,37 +11,47 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :date %><br>
+
+  <div class="form-group">
+    <%= f.label :date %> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp 
+    <%= f.label :client_name %> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+    <%= f.label :activity_name %> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+     <%= f.label :omschrijving %><br>
+    <br>
+
     <%= f.text_field :date, class: "sheet_date"%>
-  </div>
-  <div class="field">
-    <%= f.label :client_name %><br>
+      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+    
     <%= f.text_field :client_name, data: {autocomplete_source: Client.order(:name).map(&:name)} %>
-  </div>
-  <div class="field">
-    <%= f.label :activity_name %><br>
+      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+    
     <%= f.text_field :activity_name, data: {autocomplete_source: Activity.order(:name).map(&:name)} %>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  
+
+     <%= f.text_area :omschrijving, :maxlength => 80 , style: "width: 300px; height: 25px"  %>
+<hr>
   </div>
+
+
   <div class="field">
-    <%= f.label :omschrijving %><br>
-    <%= f.text_area :omschrijving %>
-  </div>
-  <div class="field">
-    <%= f.label :uur %><br>
-    <%= f.text_field :uur %>
-  </div>
-  <div class="field">
-    <%= f.label :minuten %><br>
-    <%= f.text_field :minuten %>
-  </div>
-  <div class="field">
-    <%= f.label :antal %><br>
-    <%= f.text_field :antal %>
-  </div>
-  <div class="field">
+   
+   <%= f.label :uur %> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp 
+    <%= f.label :minuten %>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+  
+     <%= f.label :antal %>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  
     <%= f.label :opmerking_intern %><br>
-    <%= f.text_area :opmerking_intern %>
+
+    <%= f.text_field :uur %>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+  
+    <%= f.text_field :minuten %>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+ 
+   
+    <%= f.text_field :antal %>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+ 
+ 
+  
+    <%= f.text_area :opmerking_intern , style: "width: 300px; height: 25px" %>
+
   </div>
   <div class="actions">
     <%= f.submit %>
