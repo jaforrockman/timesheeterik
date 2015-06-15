@@ -2,7 +2,10 @@ Rails.application.routes.draw do
  
   resources :sheets
   resources :activities
-  resources :clients
+  resources :clients do
+    collection {post :import}
+  end
+
   root to: 'pages#home'
   
 

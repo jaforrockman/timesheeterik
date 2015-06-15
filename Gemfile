@@ -16,6 +16,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'rails4-autocomplete'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'roo'
 gem 'jquery-turbolinks'
 gem 'jquery-ui-rails', '~> 5.0.3'
 

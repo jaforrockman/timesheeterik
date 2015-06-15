@@ -26,4 +26,13 @@
 
 <br>
 
+
 <%= link_to 'New Client', new_client_path %>
+<br> Or
+<p>
+  <strong>Import Client:</strong>
+  <%= form_tag import_clients_path, multipart: true do%>
+    <%= file_field_tag :file%>
+    <%= submit_tag "import"%>
+  <% end %>
+</p>
