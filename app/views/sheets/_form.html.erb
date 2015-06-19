@@ -13,6 +13,8 @@
 
 
   <div class="form-group">
+    <%= f.hidden_field :uren_type, :value => "DIRECT" %>
+
     <%= f.label :date %> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp 
     <%= f.label :client_name %> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
     <%= f.label :activity_name %> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
@@ -41,9 +43,9 @@
      <%= f.label :antal %>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  
     <%= f.label :opmerking_intern %><br>
 
-    <%= f.text_field :uur %>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+    <%= f.text_field :uur, class: "hours" %>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
   
-    <%= f.text_field :minuten %>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+    <%= f.text_field :minuten, class: "minute" %>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
  
    
     <%= f.text_field :antal %>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
@@ -57,3 +59,5 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+

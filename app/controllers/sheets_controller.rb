@@ -25,17 +25,18 @@ class SheetsController < ApplicationController
   # POST /sheets.json
   def create
     @sheet = Sheet.new(sheet_params)
-
-    respond_to do |format|
+    
       if @sheet.save
-        format.html { redirect_to @sheet, notice: 'Sheet was successfully created.' }
-        format.json { render :show, status: :created, location: @sheet }
+
+        redirect_to '/sheets/new', notice: 'Your Sheet has been saved successfully' 
+       # format.html { render :new, notice: 'Sheet was successfully created.' }
+        
       else
-        format.html { render :new }
-        format.json { render json: @sheet.errors, status: :unprocessable_entity }
+         render :new 
+       
       end
-    end
   end
+ 
 
   # PATCH/PUT /sheets/1
   # PATCH/PUT /sheets/1.json
@@ -69,6 +70,6 @@ class SheetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sheet_params
-      params.require(:sheet).permit(:date, :client_id, :activity_id, :omschrijving, :uur, :minuten, :antal, :opmerking_intern, :client_name, :activity_name)
+      params.require(:sheet).permit(:date, :client_id, :activity_id, :omschrijving, :uur, :minuten, :antal, :opmerking_intern, :client_name, :activity_name, :uren_type)
     end
 end

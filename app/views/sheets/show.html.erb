@@ -7,8 +7,7 @@
 
 <p>
   <strong>Client:</strong>
-  <%= @sheet.client_id %>
-  &nbsp
+  
   <%= @sheet.client.name %>
 
 </p>
@@ -16,7 +15,7 @@
 
 <p>
   <strong>Activity:</strong>
-  <%= @sheet.activity_id %>
+  <%= Activity.find(@sheet.activity_id).name %>
 
   &nbsp
   

@@ -4,4 +4,9 @@ class PagesController < ApplicationController
 
   def about
   end
+
+	def exporttwinfield
+		@sheets = Sheet.all.order('date ASC')
+	end
+
 end

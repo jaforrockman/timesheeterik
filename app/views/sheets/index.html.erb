@@ -20,9 +20,9 @@
   <tbody>
     <% @sheets.each do |sheet| %>
       <tr>
-        <td><%= sheet.date %></td>
-        <td><%= sheet.client_id %></td>
-        <td><%= sheet.activity_id %></td>
+        <td><%= sheet.date.strftime("%d/%m/%Y") %></td>
+        <td><%= Client.find(sheet.client_id).name %></td>
+        <td><%= Activity.find(sheet.activity_id).name %></td>
         <td><%= sheet.omschrijving %></td>
         <td><%= sheet.uur %></td>
         <td><%= sheet.minuten %></td>

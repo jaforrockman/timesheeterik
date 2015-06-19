@@ -1,0 +1,34 @@
+<h2>This is the final output for twinfield </h2>
+
+<table class="table table-hover" "width=70%">
+  <thead>
+    <tr>
+      <th>Uren Type</th>
+      <th>Garibuker</th>
+      <th>Datum</th>
+      <th>Project</th>
+      <th>Activity</th>
+      <th width="170px" >Duration in Minuten</th>
+      <th>Omschrijving</th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sheets.each do |sheet| %>
+      <tr>
+      	<td><%= sheet.uren_type %></td>
+      	<td><%= "0" %></td>
+        <td><%= sheet.date.strftime("%d/%m/%Y") %></td>
+        <td><%= Client.find(sheet.client_id).code %></td>
+        <td><%= Activity.find(sheet.activity_id).short_code %></td>
+        <td align="right"><%= sheet.minuten %></td>
+        <td><%= sheet.omschrijving %></td>
+              
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
