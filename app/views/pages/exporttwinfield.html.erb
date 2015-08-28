@@ -1,31 +1,37 @@
-<h2>This is the final output for twinfield </h2>
-<a href="/exporttwinfield.xml">xml</a>
+<p id="notice"><%= notice %></p>
 
-<table class="table table-hover" "width=70%">
+<h1>Listing Sheets</h1> 
+
+
+<table class="table table-hover">
   <thead>
     <tr>
-      <th>Uren Type</th>
-      <th>Garibuker</th>
-      <th>Datum</th>
-      <th>Project</th>
+      <th>Date</th>
+      <th>Client</th>
       <th>Activity</th>
-      <th width="170px" >Duration in Minuten</th>
       <th>Omschrijving</th>
-      
+      <th>Uur</th>
+      <th>Minuten</th>
+      <th>Antal</th>
+      <th>Opmerking intern</th>
+      <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @sheets.each do |sheet| %>
       <tr>
-      	<td><%= sheet.uren_type %></td>
-      	<td><%= "0" %></td>
         <td><%= sheet.date.strftime("%d/%m/%Y") %></td>
-        <td><%= Client.find(sheet.client_id).code %></td>
-        <td><%= Activity.find(sheet.activity_id).short_code %></td>
-        <td align="right"><%= sheet.minuten %></td>
+        <td><%= Client.find(sheet.client_id).name %></td>
+        <td><%= Activity.find(sheet.activity_id).name %></td>
         <td><%= sheet.omschrijving %></td>
-              
+        <td><%= sheet.uur %></td>
+        <td><%= sheet.minuten %></td>
+        <td><%= sheet.antal %></td>
+        <td><%= sheet.opmerking_intern %></td>
+        <td><%= link_to 'Show', sheet %></td>
+        <td><%= link_to 'Edit', edit_sheet_path(sheet) %></td>
+        <td><%= link_to 'Destroy', sheet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -33,3 +39,4 @@
 
 <br>
 
+<%= link_to 'New Sheet', new_sheet_path %>

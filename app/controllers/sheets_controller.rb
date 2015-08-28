@@ -4,7 +4,8 @@ class SheetsController < ApplicationController
   # GET /sheets
   # GET /sheets.json
   def index
-    @sheets = Sheet.all
+    @sheets = Sheet.all.order('date ASC')
+
 
      respond_to do |format|
      format.html {
