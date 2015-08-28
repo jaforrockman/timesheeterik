@@ -10,7 +10,7 @@ class PagesController < ApplicationController
 
 	respond_to do |format|
      format.html {
-        render :action => 'exporttwinfield'
+        render :exporttwinfield
         }
      format.xml {
      render :xml => @sheets.to_xml
