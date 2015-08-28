@@ -5,6 +5,15 @@ class SheetsController < ApplicationController
   # GET /sheets.json
   def index
     @sheets = Sheet.all
+
+     respond_to do |format|
+     format.html {
+        render :action => 'index'
+        }
+     format.xml {
+     render :xml => @sheets.to_xml
+    }
+    end
   end
 
   # GET /sheets/1
