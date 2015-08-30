@@ -5,12 +5,8 @@ class SheetsController < ApplicationController
   # GET /sheets.json
   def index
     @sheets = Sheet.all.order('date ASC')
-
-
      respond_to do |format|
-     format.html {
-        render :action => 'index'
-        }
+     format.html { render :index }
      format.xml {
      render :xml => @sheets.to_xml
     }
